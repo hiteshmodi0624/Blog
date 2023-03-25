@@ -6,7 +6,7 @@ export default function Hero() {
     return (
         <Section className="text-center bg-gradient-to-b from-primary-dark to-[#2F2A30]  text-light-text">
             <Image
-                src="/../public/hitesh.png"
+                src="/images/site/hitesh.png"
                 width={280}
                 height={280}
                 alt="Hitesh Modi"
