@@ -55,7 +55,7 @@ const PostContent:FC<{post:post}>=({post})=>{
     }
 
     return (
-        <article className={`flex flex-col lg:w-2/3 lg:place-self-center bg-purple-100  py-12 px-6 lg:m-6 ${styles.content}`}>
+        <article className={`flex flex-col lg:w-2/3 lg:place-self-center bg-purple-100  py-12 px-6 overflow-scroll lg:m-6 ${styles.content}`}>
             <PostHeader title={post.title} image={imageUrl}/>
             <hr className="border-purple-900 border-4 w-full opacity-60 mt-8 mb-8"/>
             <ReactMarkdown components={customRenderers}>{post.content}</ReactMarkdown>
