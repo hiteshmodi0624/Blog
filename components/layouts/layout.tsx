@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FC, PropsWithChildren, useContext } from "react"
-import Notification from "../ui/notification";
+import Notification from "../ui/Notification";
 import NotificationContext from "@/store/notification-ctx";
 
 const Layout:FC<PropsWithChildren>=(props)=>{
