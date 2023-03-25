@@ -40,7 +40,7 @@ const ContactForm=()=>{
     }
     return (
         <form className="flex justify-center my-6" onSubmit={onSubmitHandler}>
-            <Section className="w-1/2 bg-light-text-2 py-4 rounded-md px-4">
+            <Section className="lg:w-1/2 bg-light-text-2 py-4 rounded-md px-4">
                 <Heading text="How can I help you?" />
                 <div className="grid grid-cols-2 gap-2 w-full">
                     <InputElement
