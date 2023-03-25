@@ -7,7 +7,7 @@ const Layout:FC<PropsWithChildren>=(props)=>{
     const notificationCtx=useContext(NotificationContext);
     return (
         <div className="bg-primary-light min-h-screen">
-            <header className="lg:px-40 py-6 flex justify-between items-center bg-primary-dark">
+            <header className="lg:px-40 py-6 flex justify-between items-center bg-primary-dark px-2">
                 <Link href="/" className="logo">
                     <h1 className="uppercase text-3xl font-extrabold text-gray-200 font-sans">
                         Hitesh&apos; Blog
