@@ -1,5 +1,5 @@
 import Heading from "@/components/ui/heading";
-import Section from "@/components/ui/section";
+import Section from "@/components/layouts/section";
 import Image from "next/image";
 
 export default function Hero() {

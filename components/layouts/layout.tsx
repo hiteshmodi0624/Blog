@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FC, PropsWithChildren, useContext } from "react"
-import Notification from "../ui/Notification";
+import Notification from "../ui/notification";
 import NotificationContext from "@/store/notification-ctx";
 
 const Layout:FC<PropsWithChildren>=(props)=>{
@@ -24,7 +24,7 @@ const Layout:FC<PropsWithChildren>=(props)=>{
                     </ul>
                 </nav>
             </header>
-            <main>{props.children}</main>
+            <main className="grid">{props.children}</main>
             {notificationCtx.notification && (
                 <Notification
                     message={notificationCtx.notification.message}

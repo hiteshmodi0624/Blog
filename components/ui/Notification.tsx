@@ -1,5 +1,6 @@
 import { FC, useContext } from "react";
 import NotificationContext from "@/store/notification-ctx";
+import ReactDOM from "react-dom";
 
 const Notification:FC<{title:string,message:string,status:string}>=(props)=>{
     const notificationCtx = useContext(NotificationContext);
@@ -20,7 +21,7 @@ const Notification:FC<{title:string,message:string,status:string}>=(props)=>{
         statusClasses = "bg-blue-800";
     }
 
-    return (
+    return ReactDOM.createPortal((
         <div
             className={
                 `fixed bottom-0 left-0 h-20 w-full flex justify-between items-center text-white py-2 px-[10%] ${statusClasses}`
@@ -30,7 +31,7 @@ const Notification:FC<{title:string,message:string,status:string}>=(props)=>{
             <h2 className="m-0 text-lg color-white">{title}</h2>
             <p>{message}</p>
         </div>
-    );
+    ),document.getElementById('notification')!);
 }
 
 export default Notification;

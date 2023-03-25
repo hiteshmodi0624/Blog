@@ -1,11 +1,26 @@
-import Featured from "@/sections/featured";
-import Hero from "@/sections/hero";
+import FeaturedPosts from "@/components/sections/featured-posts";
+import Hero from "@/components/sections/hero";
+import { getFeaturedPosts } from "@/helpers/posts-util";
+import post from "@/modals/post";
+import { GetStaticProps } from "next";
+import { FC } from "react";
 
-export default function Home() {
+const Home:FC<{posts:post[]}>=({posts})=>{
+  console.log(posts)
   return (
     <>
       <Hero/>
-      <Featured/>
+      <FeaturedPosts posts={posts}/>
     </>
   )
+}
+export default Home
+export const getStaticProps:GetStaticProps=()=>{
+  const featuredPaths= getFeaturedPosts();
+  return {
+    props:{
+      posts:featuredPaths
+    },
+    revalidate:21600
+  }
 }

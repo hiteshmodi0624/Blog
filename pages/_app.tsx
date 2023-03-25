@@ -9,7 +9,9 @@ export default function App({ Component, pageProps }: AppProps) {
     <NotificationComponentProvider>
       <Layout>
         <Head>
+          <meta name="viewport" content='width=device-width, initial-scale=1'/>
           <title>Hitesh&apos; Blog</title>
+          <meta name="description" content='I code about programming and web development'/>
         </Head>
         <Component {...pageProps} />
       </Layout>

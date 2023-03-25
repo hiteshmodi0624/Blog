@@ -1,8 +1,9 @@
 export default interface post{
-    imageUrl:string,
+    image:string,
     title:string,
     date:string,
     excerpt:string,
     slug:string,
-    featured:boolean
+    isFeatured:boolean,
+    content:string
 }
